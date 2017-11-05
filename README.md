@@ -29,38 +29,38 @@ From this page, the user can modify his profile, log out, add a "Marker" to sign
 # Functionalities
 Here is a list of the main functionalities of the project
 ### Register
-To access any part of the application you need to have an account.
+To access any part of the application you need to have an account.<br/>
 <img src="resources/images/Register.PNG" alt="Register">
 <br/>
 ### Log in
-To access any part of the application you need to be logged in.
+To access any part of the application you need to be logged in.<br/>
 <img src="resources/images/LogIn.PNG" alt="Log In">
 <br/>
 ### Home Page
 On the home page you have a map and 4 buttons:<br/>
--Locations (to list each location people added and are going to)<br/>
--User Profile (to change your account level, user name or log out)<br/>
--Add Marker (to add a location and required informations for people who want to join you for a raid)<br/>
--Center (to center the map on your location)
+- Locations (to list each location people added and are going to)<br/>
+- User Profile (to change your account level, user name or log out)<br/>
+- Add Marker (to add a location and required informations for people who want to join you for a raid)<br/>
+- Center (to center the map on your location)<br/>
 <img src="resources/images/Home.PNG" alt="Home">
 <br/>
 ### User Page
-On the user profile page, the user can modify his userName and level in case the information needs to be updated.
+On the user profile page, the user can modify his userName and level in case the information needs to be updated.<br/>
 <img src="resources/images/Profile.PNG" alt="Profile">
 <br/>
 ### Locations
-On the locations page, users can view the location names, and click on various locations to view more detailed information.
+On the locations page, users can view the location names, and click on various locations to view more detailed information.<br/>
 <img src="resources/images/Locations.PNG" alt="Locations">
 <br/>
 ### Location
-Once on a specific location page, users can signal themselve as en route to location, which then adds them to a list of users serving to display itineraries from all users coming to said location.
+Once on a specific location page, users can signal themselve as en route to location, which then adds them to a list of users serving to display itineraries from all users coming to said location.<br/>
 <img src="resources/images/Location.PNG" alt="Location">
 <br/>
 ### Display Users
-Display each user itineraries.
+Display each user itineraries.<br/>
 <img src="resources/images/DisplayUsers.PNG" alt="Display Users">
 <br/>
 ### Add Marker
-Add where you are going and at what time (for a Pokemon user you can also add the raid boss name and the time of end).
+Add where you are going and at what time (for a Pokemon user you can also add the raid boss name and the time of end).<br/>
 <img src="resources/images/AddMarker.PNG" alt="Add Marker">
 <br/>
