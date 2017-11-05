@@ -27,7 +27,7 @@ First, the user must sign-up and/or log-in to the application. Once the user is 
 From this page, the user can modify his profile, log out, add a "Marker" to signal an incoming event, view already created locations and re-center the map on his location if need be.
 
 # Functionalities
-
+Here is a list of the main functionalities of the project
 ### Register
 To access any part of the application you need to have an account.
 <img src="resources/images/Register.PNG" alt="Register">
