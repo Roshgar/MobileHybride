@@ -29,12 +29,15 @@ From this page, the user can modify his profile, log out, add a "Marker" to sign
 # Functionalities
 
 ### Register
-To access any part of the application you need to have an account
+To access any part of the application you need to have an account.
 ### Log in
-To access any part of the application you need to be logged in
+To access any part of the application you need to be logged in.
 ### Home Page
-On the home page you have 4 buttons:<br/>
- 
+On the home page you have a map and 4 buttons:<br/>
+-Locations (to list each location people added and are going to)<br/>
+-User Profile (to change your account level, user name or log out)<br/>
+-Add Marker (to add a location and required informations for people who want to join you for a raid)<br/>
+-Center (to center the map on your location)
 ### User Page
 On the user profile page, the user can modify his userName and level in case the information needs to be updated.
 ### Locations
@@ -42,8 +45,6 @@ On the locations page, users can view the location names, and click on various l
 ### Location
 Once on a specific location page, users can signal themselve as en route to location, which then adds them to a list of users serving to display itineraries from all users coming to said location.
 ### Display Users
- 
+Display each user itineraries.
 ### Add Marker
- 
-
- 
+Add where you are going and at what time (for a Pokemon user you can also add the raid boss name and the time of end).
