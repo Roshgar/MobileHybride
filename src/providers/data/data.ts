@@ -62,6 +62,7 @@ export class DataProvider {
         console.log('in addUserToLocation');
         console.log(snapshot.val());
          users.set(updated);
+         alert("You are going to location");
       }
       else
         alert("You are already registered to this location.");
@@ -79,6 +80,7 @@ export class DataProvider {
         var toRemove = updated.indexOf(user);
         if (toRemove > -1) {
           updated.splice(toRemove, 1)
+          alert("You are not going to location anymore");
         }
         else
           alert("You are not registered for that location.");
