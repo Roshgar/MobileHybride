@@ -41,7 +41,7 @@ Once the user is logged in, he can then acces the application. Initially the vie
  On the user profile page, the user can modify his userName and level in case the information needs to be updated.
  ### Locations
  On the locations page, users can view the location names, and click on various locations to view more detailed information.
- ####Location
+ #### Location
  Once on a specific location page, users can signal themselve as en route to location, which then adds them to a list of users serving to display itineraries from all users coming to said location.
  
 
