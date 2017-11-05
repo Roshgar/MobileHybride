@@ -1,10 +1,18 @@
 
 # Group composition
-courtu_r
+courtu_r<br/>
 terran_j
+
+# Class attendance
+We didn't attend the class (neither of us is living in Paris)
 
 # Usage
 You can either type "ionic serve" in the project folder to start the server or just download the apk
+
+## Project constraints
+Ionic 2 with Firebase<br/>
+Using geolocation and network status<br/>
+And some backend fonctionalities as auth and data stockage
 
 ## Technical Requirements
 To correctly use this application, you need :
