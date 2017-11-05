@@ -49,8 +49,16 @@ export class UserPage {
     var userName = this.userForm.value.userName;
     var level = this.userForm.value.level;
 
-    //this._dataProvider.updatelevel();
+    if (level) {
+      this._dataProvider.updateLevel(this._logInProvider.getCurrentUserId(), level);
+    }
+    //
+    if (userName) {
+      this._dataProvider.updateUserName(this._logInProvider.getCurrentUserId(), userName);
+    }
+    alert("updated");
     //this._dataProvider.updateUserName();
+  //  this.navCtrl.pop(UserPage);
   }
 
   public logOut() {

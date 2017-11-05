@@ -251,6 +251,22 @@ export class DataProvider {
       console.log(positions);
     });*/
   }
+
+  public updateLevel(userId, newLevel) {
+    console.log("user = " + newLevel);
+      var level = this._users.child(userId).child('level');
+      level.once('value').then(function (snapshot) {
+        level.set(newLevel);
+      });
+  }
+
+  public updateUserName(userId, newUserName) {
+    console.log("user = " + newUserName);
+      var userName =  this._users.child(userId).child('userName');
+      userName.once('value').then(function (snapshot) {
+        userName.set(newUserName);
+      });
+  }
 }
 
 
