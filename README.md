@@ -1,12 +1,12 @@
 
-# Group composition
-courtu_r<br/>
-terran_j
+## Group composition
+courtu_r (Ronan Courture)<br/>
+terran_j (Julie Terranova)
 
-# Class attendance
+## Class attendance
 We didn't attend the class (neither of us is living in Paris)
 
-# Usage
+## Usage
 You can either type "ionic serve" in the project folder to start the server or just download the apk
 
 ## Project constraints
