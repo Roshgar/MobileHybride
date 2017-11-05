@@ -21,14 +21,6 @@ export class HomePage {
   testRoot = LogInPage;
   constructor(public geolocation: Geolocation,
               public _dataProvider : DataProvider, public _logInProvider : LogInProvider, public nav : NavController) {
-                this.geolocation.watchPosition().subscribe((data) => {
-                  if (data.coords) {
-                    this._dataProvider.updatePosition(this._logInProvider.getCurrentUserId(), {lat: data.coords.latitude, lon: data.coords.longitude });
-                  }
-                  else {
-                    console.log('An error occured in geolocation update.');
-                  }
-                });
   }
 
   /*
@@ -36,6 +28,16 @@ export class HomePage {
   */
   ionViewDidLoad(){
     console.log('In viewloaded');
+
+    this.geolocation.watchPosition().subscribe((data) => {
+      if (data.coords) {
+        this._dataProvider.updatePosition(this._logInProvider.getCurrentUserId(), {lat: data.coords.latitude, lon: data.coords.longitude });
+      }
+      else {
+        console.log('An error occured in geolocation update.');
+      }
+    });
+
     //this._dataProvider.printDataTest();
     this.loadMap();
 }
