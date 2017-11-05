@@ -44,8 +44,20 @@ ionViewWillEnter() {
   console.log('in enter')
 }
   loadMap(){
-    console.log('entry of loadmap')
-    this.geolocation.getCurrentPosition().then((position) => {
+    console.log('entry of loadmap');
+    var self = this;
+    this._dataProvider.getUser(this._logInProvider.getCurrentUserId()).then(function (user) {
+      let latLng = new google.maps.LatLng(user.pos.lat, user.pos.lon);
+
+      let mapOptions = {
+        center: latLng,
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+
+      self.map = new google.maps.Map(self.mapElement.nativeElement, mapOptions);
+    });
+  /*  this.geolocation.getCurrentPosition().then((position) => {
 
       let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
@@ -60,7 +72,7 @@ ionViewWillEnter() {
     }, (err) => {
       console.log('error during map load')
       console.log(err);
-    });
+    });*/
   }
 
   addInfoWindow(marker, content){
