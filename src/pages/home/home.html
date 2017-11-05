@@ -1,14 +1,21 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Map
     </ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="locations()"><ion-icon name="locations"></ion-icon>Locations</button>
+      <button ion-button (click)="userProfile()"><ion-icon name="profile"></ion-icon>User Profile</button>
+      <button ion-button (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button>
+      <button ion-button (click)="centerMap()"><ion-icon name="centerMap"></ion-icon>Center</button>
+      <button ion-button (click)="logIn()"><ion-icon name="logIn"></ion-icon>Log in</button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+
+<ion-content>
+  <div #map id="map"></div>
 </ion-content>

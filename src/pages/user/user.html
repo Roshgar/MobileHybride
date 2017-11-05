@@ -1,0 +1,41 @@
+<!--
+  Generated template for the UserPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{_user.userName}}'s Profile'</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div>E-mail: {{_user.email}}</div>
+
+<div *ngIf='userForm'>
+  <form [formGroup]="userForm" (submit)="updateUser()" novalidate>
+
+    <ion-item>
+      <ion-label stacked>Level</ion-label>
+      <ion-input formControlName="level" type="text" placeholder={{_user.level}}
+        >
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>User-Name</ion-label>
+      <ion-input formControlName="userName" type="text" placeholder={{_user.userName}}
+        >
+      </ion-input>
+    </ion-item>
+    <button ion-button block type="submit">
+      Update
+    </button>
+</form>
+</div>
+
+
+</ion-content>
