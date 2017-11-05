@@ -38,10 +38,10 @@ To access any part of the application you need to be logged in.<br/>
 <br/>
 ### Home Page
 On the home page you have a map and 4 buttons:<br/>
-- Locations (to list each location people added and are going to)<br/>
-- User Profile (to change your account level, user name or log out)<br/>
-- Add Marker (to add a location and required informations for people who want to join you for a raid)<br/>
-- Center (to center the map on your location)<br/>
+-Locations (to list each location people added and are going to)<br/>
+-User Profile (to change your account level, user name or log out)<br/>
+-Add Marker (to add a location and required informations for people who want to join you for a raid)<br/>
+-Center (to center the map on your location)<br/>
 <img src="resources/images/Home.PNG" alt="Home">
 <br/>
 ### User Page
