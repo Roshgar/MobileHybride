@@ -23,3 +23,19 @@ $ ionic cordova run ios
 ```
 
 Substitute ios for android if not on a Mac.
+
+
+##Technical Requirements
+To correctly use this application, you need :
+  - Internet Connectivity
+  - Authorize geolocation
+  
+  
+##Objective of Application
+This application is made for (in this instance) pokemonGo users to converge on a location at a set time for a "raid".
+First, the user must sign-up and/or log-in to the application.
+Once the user is logged in, he can then acces the application. Initially the view will be a map centered on the users location. From this page, the user can modify his profile, add a "Marker" to signal an incoming event, view already created locations and re-center the map if need be.
+
+ #UserPage
+ #Locations
+ 
