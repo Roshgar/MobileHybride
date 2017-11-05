@@ -10,7 +10,7 @@ import { LogInProvider } from '../providers/log-in/log-in';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = HomePage;
+  rootPage: any = LogInPage;
 
   constructor(
     platform: Platform,
