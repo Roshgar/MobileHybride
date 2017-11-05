@@ -20,10 +20,11 @@ To correctly use this application, you need :
   - Authorize geolocation
   
 ## Objective of Application
-Tired of people saying "I'll be there in 5 minutes" when you know perfectly well that they are probably still getting ready? Fret not! The lies are over with this application!
-This application is made for (in this instance) pokemonGo users to converge on a location at a set time for a "raid".
+Tired of people saying "I'll be there in 5 minutes" when you know perfectly that they are probably still getting ready?<br/>
+The lies are over with this application!<br/>
+This application is made for (in this instance) PokemonGo users to converge on a location at a set time for a "Raid".<br/>
 First, the user must sign-up and/or log-in to the application.
-Once the user is logged in, he can then acces the application. Initially the view will be a map centered on the users location. From this page, the user can modify his profile, add a "Marker" to signal an incoming event, view already created locations and re-center the map if need be.
+Once the user is logged in, he can then acces the application. Initially the view will be a map centered on the users location. From this page, the user can modify his profile, add a "Marker" to signal an incoming event, view already created locations and re-center the map on his location if need be.
 
  ### UserPage
  On the user profile page, the user can modify his userName and level in case the information needs to be updated.
