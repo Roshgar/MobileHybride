@@ -22,7 +22,7 @@ import * as firebase from 'firebase';
 export class AddMarkerPage {
   public addMarkerForm: FormGroup;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public _dataprovider: DataProvider,
+  constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public _dataProvider: DataProvider,
               public geolocation : Geolocation, public _logInProvider: LogInProvider) {
 
   }
@@ -44,11 +44,28 @@ export class AddMarkerPage {
   public addMarker() {
     if (this.addMarkerForm.valid){
       var self = this;
-      this.geolocation.getCurrentPosition().then((position) => {
+      this._dataProvider.getUser(this._logInProvider.getCurrentUserId()).then(function (user) {
+        let latLng = new google.maps.LatLng(user.pos.lat, user.pos.lon);
+        self._dataProvider.addLocation({arName : self.addMarkerForm.value.arName,
+                                        pName : self.addMarkerForm.value.pName,
+                                        desc : self.addMarkerForm.value.desc,
+                                        timer : self.addMarkerForm.value.timer,
+                                        currTime :  0,
+                                        pos : { lat : latLng.lat(),
+                                                long : latLng.lng()
+                                          },// figure out time
+                                        creator : self._logInProvider.getCurrentUserId(),
+                                        users : [
+                                          self._logInProvider.getCurrentUserId()
+                                        ]});
 
+      });
+/*
+      this.geolocation.getCurrentPosition().then((position) => {
+        console.log("In currPosition")
         let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
         console.log(this.addMarkerForm.value);
-        self._dataprovider.addLocation({arName : self.addMarkerForm.value.arName,
+        self._dataProvider.addLocation({arName : self.addMarkerForm.value.arName,
                                         pName : this.addMarkerForm.value.pName,
                                         desc : this.addMarkerForm.value.desc,
                                         timer : this.addMarkerForm.value.timer,
@@ -65,7 +82,8 @@ export class AddMarkerPage {
         console.log(err);
       });
 
-
+*/
+  this.navCtrl.pop(AddMarkerPage);
     }
   }
 }
