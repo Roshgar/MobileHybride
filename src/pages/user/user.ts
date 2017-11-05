@@ -53,4 +53,8 @@ export class UserPage {
     //this._dataProvider.updateUserName();
   }
 
+  public logOut() {
+    this._logInProvider.logoutUser();
+  }
+
 }
