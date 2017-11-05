@@ -26,12 +26,12 @@ export class MyApp {
         console.log('redirect to login')
         self.rootPage = LogInPage;
         self._loginProvider.setIsLogged(false);
-        unsubscribe();
+        //unsubscribe();
       } else {
         console.log('redirect to home');
         self.rootPage = HomePage;
         self._loginProvider.setIsLogged(true);
-        unsubscribe();
+        //unsubscribe();
       }
     });
     platform.ready().then(() => {
