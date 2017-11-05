@@ -11,7 +11,7 @@ You can either type "ionic serve" in the project folder to start the server or j
 
 ## Project constraints
 Ionic 2 with Firebase<br/>
-Using geolocation and network status<br/>
+Using geolocation<br/>
 And some backend fonctionalities as auth and data stockage
 
 ## Technical Requirements
