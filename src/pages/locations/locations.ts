@@ -17,7 +17,7 @@ import {LocationPage} from '../../pages/location/location'
 })
 export class LocationsPage {
 
-  private _locations: any = [];
+  private _locations: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private _dataProvider: DataProvider) {
     this._locations = navParams.get("locations");

@@ -101,7 +101,21 @@ ionViewWillEnter() {
   }
 
   public locations() {
-    this.nav.push(LocationsPage, {locations : this._dataProvider.getLocations()});
+    var self = this;
+    this._dataProvider.getLocations().then(function (ret) {
+      console.log("locs");
+      console.log(ret);
+      self.nav.push(LocationsPage, {locations : ret});
+    });
+
+
+    /*
+    this._dataProvider.getLocations().then((locs) => {
+      console.log(locs);
+      self.nav.push(LocationsPage, {locations : locs});
+    });
+    */
+
   }
 
   public addMarker(){

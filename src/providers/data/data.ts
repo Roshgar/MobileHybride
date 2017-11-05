@@ -2,9 +2,8 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import * as firebase from 'firebase';
-import {LogInProvider} from '../log-in/log-in'
+
 import {DirectionsProvider} from '../directions/directions'
-declare var google;
 
 /*
   Generated class for the DataProvider provider.
@@ -17,9 +16,8 @@ export class DataProvider {
   private _db: any;
   private _locations: any;
   private _users: any;
-  private _currentUsers: any;
 
-  constructor(public http: Http, private _logInProvider: LogInProvider, private _directionsProvider: DirectionsProvider) {
+  constructor(public http: Http, private _directionsProvider: DirectionsProvider) {
     console.log('Hello DataProvider Provider');
     this._db = firebase.database().ref('/'); // Get a firebase reference to the root
     this._locations = firebase.database().ref('/locations');
@@ -28,20 +26,22 @@ export class DataProvider {
 
   public getLocations() {
     var ret = [];
+    var locations = new Array;
 
-    console.log('getLocations')
-    this._locations.on("value", function(snapshot) {
-      var locations = [];
+
+    return (this._locations.once("value").then(function(snapshot) {
+      console.log('getLocations')
       var tmp = snapshot.val();
       for (var key in tmp) {
         locations.push(tmp[key]);
       }
       console.log(locations);
       ret = locations;
+      return (locations);
     }, function (errorObject) {
       console.log("The read failed: " + errorObject.code);
-    });
-      return (ret);
+      return (null);
+    }));
   }
 
   public printDataTest() {
@@ -118,16 +118,13 @@ export class DataProvider {
   public updatePosition(userId, newPos) {
     var pos = this._users.child(userId).child('pos');
     pos.once('value').then(function (snapshot) {
-      var tmp = snapshot.val();
       pos.set(newPos);
     });
   }
 
   public getUserIds(locationName) {
-    var tmp;
     var userIds = [];
     var locationUsers = this._locations.child(locationName).child('users');
-    var self = this;
     return locationUsers.once('value').then(function (snapshot) {
       var uIds = snapshot.val();
       for (var i in uIds) {
