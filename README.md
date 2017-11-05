@@ -28,12 +28,22 @@ From this page, the user can modify his profile, log out, add a "Marker" to sign
 
 # Functionalities
 
- ### UserPage
- On the user profile page, the user can modify his userName and level in case the information needs to be updated.
- ### Locations
- On the locations page, users can view the location names, and click on various locations to view more detailed information.
- #### Location
- Once on a specific location page, users can signal themselve as en route to location, which then adds them to a list of users serving to display itineraries from all users coming to said location.
+### Register
+To access any part of the application you need to have an account
+### Log in
+To access any part of the application you need to be logged in
+### Home Page
+On the home page you have 4 buttons:<br/>
+ 
+### User Page
+On the user profile page, the user can modify his userName and level in case the information needs to be updated.
+### Locations
+On the locations page, users can view the location names, and click on various locations to view more detailed information.
+### Location
+Once on a specific location page, users can signal themselve as en route to location, which then adds them to a list of users serving to display itineraries from all users coming to said location.
+### Display Users
+ 
+### Add Marker
  
 
  
